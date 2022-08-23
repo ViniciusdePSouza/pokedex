@@ -6,11 +6,17 @@
 
 :root {
     font-size: 62.5%;
+
+    --txt-color-light: rgb(245, 216, 216);
+    --text-color-dark: rgb(12, 12, 12);
 }
 
 body {
     min-height: 100vh;
-    background: linear-gradient(120deg, rgba(236, 102, 102, 0.753), rgba(236, 130, 130, 0.753))
+    background: linear-gradient(120deg, rgba(250, 29, 29, 0.753), rgba(236, 130, 130, 0.753));
+
+    font-family: 'Aboreto', sans-serif;
+    color: var(--txt-color-dark);
 }
 
 .sr-only {
@@ -64,6 +70,16 @@ button input::placeholder {
     opacity: 0.5
 }
 
+h1 {
+    font-size: 1.7rem;
+    font-weight: bold;
+}
+
+span {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
 .card-wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -81,6 +97,8 @@ button input::placeholder {
     display: flex;
     flex-direction: column;
     gap: 3.2rem;
+
+    position: relative;
 
     width: 25rem;
     height: 35rem;
@@ -111,6 +129,18 @@ button input::placeholder {
     height: 90%;
 }
 
+.poke-photo .garbage-icon {
+    width: 20px;
+    height: 20px;
+
+    position: absolute;
+
+    top: 10px;
+    right: 10px;
+
+    cursor: pointer;
+}
+
 .poke-info {
     display: flex;
     justify-content: space-between;
@@ -119,16 +149,19 @@ button input::placeholder {
 .bio-info {
     display: flex;
     flex-direction: column;
+    gap: .7rem;
+
+    margin-bottom: 3rem;
 }
 
 .type-info {
     display: flex;
     align-items: center;
-    gap: 1.5rem;
+    gap: 1rem;
 }
 
 .type-info span {
-    width: 5rem;
+    width: 5.3rem;
 
     display: flex;
     flex-direction: column;
@@ -136,10 +169,48 @@ button input::placeholder {
     text-align: center;
 
     padding: 0.5rem;
-
-    background-color: blue;
     border-radius: 5px;
+
+    margin-bottom: 5rem;
 }
+
+.poketype-fairy{
+    color: var(--txt-color-light);
+    background-color: rgb(253, 18, 214);
+}
+
+.poketype-normal {
+    background-color: rgba(180, 123, 96, 0.877);
+}
+
+.poketype-fire{
+    background-color: rgb(255, 1, 1);
+    color: var(--txt-color-light);  
+ }
+
+ .poketype-water {
+    background-color: rgb(25, 64, 240);
+    color: var(--txt-color-light);
+ }
+
+ .poketype-grass{
+    background-color: rgb(27, 247, 7);
+ }
+
+ .poketype-fighter {
+    background-color: rgb(68, 2, 2);
+    color: var(--txt-color-light);
+ }
+
+ .poketype-flyer {
+    background-color: rgb(154, 235, 231);
+    color: var(--txt-color-dark);
+ }
+
+ .poketype-psychic {
+    background-color: rgb(153, 0, 153);
+    color: var(--txt-color-light)
+ }
 
 @keyframes rotate {
     0% {
